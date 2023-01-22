@@ -3,9 +3,11 @@ package Util;
 import static io.restassured.RestAssured.given;
 import io.restassured.RestAssured;
 import io.restassured.module.jsv.JsonSchemaValidator;
+
 import java.io.File;
 
 public class SchemaValidator {
+
 	public boolean jsonSchemaValidation(String filelocation) {
 		boolean status = false;
 		try {
@@ -24,10 +26,10 @@ public class SchemaValidator {
 			status = true;
 		}
 
-		catch (AssertionError e) {
+		catch (AssertionError ex) {
 			System.out.println("Exception caught and  schema validation failed");
-			System.out.println(e.getMessage());
-			status = false;
+			System.out.println(ex.getMessage());
+
 		}
 
 		return status;

@@ -9,12 +9,12 @@ public class VerifySuccessSchema {
 
 	SchemaValidator result = new SchemaValidator();
 
-	@Test
+	@Test(description = "Schema validation- Passing scenario")
 	public void verifySuccessSchemaTest() {
-		String filelocation = "E:\\testsmallcase\\src\\test\\resources\\schema.json";
+
+		String filelocation = System.getProperty("user.dir") + "\\src\\test\\resources\\schema.json";
 		boolean status = result.jsonSchemaValidation(filelocation);
 		Assert.assertTrue(status, " Schema validation done, test passed");
-		
 
 	}
 }

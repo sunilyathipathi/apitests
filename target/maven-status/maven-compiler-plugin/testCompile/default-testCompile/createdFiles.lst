@@ -1,1 +1,3 @@
+apitest\VerifySuccessSchema.class
+apitest\VerifyfailureSchema.class
 Util\SchemaValidator.class
