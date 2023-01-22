@@ -1,4 +1,4 @@
-package Util;
+package commonUtil;
 
 import static io.restassured.RestAssured.given;
 import io.restassured.RestAssured;

@@ -3,7 +3,7 @@ package apitest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Util.SchemaValidator;
+import commonUtil.SchemaValidator;
 
 public class VerifySuccessSchema {
 
@@ -14,7 +14,7 @@ public class VerifySuccessSchema {
 
 		String filelocation = System.getProperty("user.dir") + "\\src\\test\\resources\\schema.json";
 		boolean status = result.jsonSchemaValidation(filelocation);
-		Assert.assertTrue(status, " Schema validation done, test passed");
+		Assert.assertTrue(status, "Schema validation success testcase failed");
 
 	}
 }

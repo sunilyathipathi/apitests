@@ -3,7 +3,7 @@ package apitest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Util.SchemaValidator;
+import commonUtil.SchemaValidator;
 
 public class VerifyfailureSchema {
 
@@ -14,6 +14,8 @@ public class VerifyfailureSchema {
 		String filelocation = System.getProperty("user.dir") + "\\src\\test\\resources\\wrongschema.json";
 
 		boolean status = result.jsonSchemaValidation(filelocation);
-		Assert.assertFalse(status, " Schema validation for negative test done, test passed");
+
+		Assert.assertFalse(status, "Schema validation for negative test failed");
+
 	}
 }
